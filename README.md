@@ -1,4 +1,8 @@
-# go-sample
+# go-sample      
 
 
-docker-compose up -d
+実行コマンド
+
+```
+ bash build_and_run.sh
+```
