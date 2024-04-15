@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Dockerイメージのビルド
-docker build -t my-go-app .
+# docker-compose up コマンドを実行
+docker-compose up -d
 
-# Dockerコンテナの実行
-docker run -p 8080:8080 my-go-app
+# ログ出力
+docker-compose logs -f

@@ -1,4 +1,6 @@
-CREATE TABLE users (
+USE go_sample_db;
+
+CREATE TABLE IF NOT EXISTS `users` (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -6,5 +8,13 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO users (username, email, password) VALUES ('user1', 'user1@example.com', 'password1');
-INSERT INTO users (username, email, password) VALUES ('user2', 'user2@example.com', 'password2');
+CREATE TABLE IF NOT EXISTS `users2` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO `users` (username, email, password) VALUES ('user1', 'user1@example.com', 'password1');
+INSERT INTO `users` (username, email, password) VALUES ('user2', 'user2@example.com', 'password2');
