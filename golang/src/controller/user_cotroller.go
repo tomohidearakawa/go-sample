@@ -18,3 +18,6 @@ func GetAllUsersHandler(w http.ResponseWriter, r *http.Request, db *sql.DB) {
 		fmt.Fprintf(w, "ID: %d, Username: %s, Email: %s\n", user.ID, user.Username, user.Email)
 	}
 }
+
+
+test
